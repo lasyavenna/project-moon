@@ -55,3 +55,22 @@ body {
 
 
 
+
+/* AVATAR GROWING BOX STYLES */
+.avatar {
+    background-color: #EDCEBE;
+    height: 500px;
+    width: 350px;
+    position: absolute;
+    top: 2rem;
+    left: 80.5rem;
+    text-align: center;
+    border-radius: 30px;
+}
+
+
+
+
+
+/* TASKLIST BOX STYLES */
+
