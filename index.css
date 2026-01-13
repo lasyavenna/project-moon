@@ -11,7 +11,7 @@ body {
 
 .background {
     min-height: 100vh;
-    background-image: url("Assets/Background Image/Sailor-Moon-Background.jpeg");
+    background-image: url("Assets/Background Image/Sailor_Moon.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,7 +59,7 @@ body {
 /* AVATAR GROWING BOX STYLES */
 .avatar {
     background-color: #EDCEBE;
-    height: 500px;
+    height: 470px;
     width: 350px;
     position: absolute;
     top: 2rem;
@@ -73,4 +73,13 @@ body {
 
 
 /* TASKLIST BOX STYLES */
-
+.tasks {
+    background-color: #EDCEBE;
+    height: 360px;
+    width: 350px;
+    position: absolute;
+    top: 33.5rem;
+    left: 80.5rem;
+    text-align: center;
+    border-radius: 30px;
+}
