@@ -1,0 +1,85 @@
+html, body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    color: #703838;
+    margin: auto;
+    font-family: "Gugi", sans-serif;
+}
+
+.background {
+    min-height: 100vh;
+    background-image: url("Assets/Background Image/Sailor_Moon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+
+
+/* TIMER STYLES */
+.timer {
+    position: absolute;
+    top: 7rem;
+    left: 10rem;
+    text-align: center;
+}
+
+#timer-display {
+    font-size: 200px;
+    margin: auto;
+}
+
+#timer-button {
+    font-family: "Gugi", sans-serif;
+    background-color: #FDE3BF;
+    font-size: 40px;
+    color: #703838;
+    height: 75px;
+    width: 28rem;
+    margin-top: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    max-width: 90vw;    
+    border: none;
+}
+
+
+
+
+
+
+/* AVATAR GROWING BOX STYLES */
+.avatar {
+    background-color: #EDCEBE;
+    height: 450px;
+    width: 350px;
+    position: absolute;
+    top: 3rem;
+    left: 78rem;
+    text-align: center;
+    border-radius: 30px;
+}
+
+
+
+
+
+/* TASKLIST BOX STYLES */
+.tasks {
+    background-color: #EDCEBE;
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    top: 34rem;
+    left: 78rem;
+    text-align: center;
+    border-radius: 30px;
+}
