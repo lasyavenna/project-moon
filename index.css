@@ -11,7 +11,7 @@ body {
 
 .background {
     min-height: 100vh;
-    background-image: url("Assets/Background Image/Sailor_Moon.png");
+    background-image: url("assets/Background Image/Sailor_Moon.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -50,6 +50,11 @@ body {
     }
 }
 
+@media (max-height: 800px) {
+    .layout {
+        padding: 2rem;
+    }
+}
 
 /* TIMER STYLES */
 .timer {
@@ -90,13 +95,15 @@ body {
 }
 
 .avatar {
-    height: 450px;
+    min-height: 300px;
+    height: 40vh;
+    max-height: 450px;
 }
-
-
 
 
 /* TASKLIST BOX STYLES */
 .tasks {
-    height: 350px;
+    min-height: 250px; 
+    height: 30vh; 
+    max-height: 350px;
 }
