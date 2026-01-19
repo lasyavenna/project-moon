@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     avatarBox.addEventListener("click", updateProgressBarManual);
+});
+
 const addBtn = document.getElementById("add-task");
 const taskField = document.getElementById("task-field");
 const taskList = document.getElementById("task-list");
