@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     overflow-x: hidden;
 }
@@ -72,7 +73,7 @@ body {
     border-radius: 30px;
     cursor: pointer;
     text-decoration: none;
-    max-width: 90vw;    
+    max-width: 90vw;
     border: none;
 }
 
@@ -91,6 +92,43 @@ body {
 
 .avatar {
     height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#avatar-name {
+    color: #703838;
+    font-size: 2rem;
+    font-family: "Gugi", sans-serif;
+    padding-top: 20px;
+}
+
+.progress-bar {
+    width: 270px;
+    height: 25px;
+    background-color: #F4BA7A;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;      /* vertical center */
+    justify-content: left;  /* horizontal center */
+
+    font-family: "Gugi", sans-serif;
+    font-size: 0.9rem;
+}
+
+.progress-bar-fill {
+    width: 0;
+    height: 25px;
+    background-color: #F08571;
+    border-radius: 30px;
+
+    transition: all 0.3s;
+
+    display: flex;
+    align-items: center;      /* vertical center */
+    justify-content: right;  /* horizontal center */
 }
 
 
