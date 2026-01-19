@@ -1,0 +1,109 @@
+html, body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    color: #703838;
+    margin: auto;
+    font-family: "Gugi", sans-serif;
+}
+
+.background {
+    min-height: 100vh;
+    background-image: url("assets/Background Image/Sailor_Moon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow-x: hidden;
+}
+
+.layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem;
+    gap: 3rem;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side {
+        width: 100%;
+        align-items: center;
+    }
+
+    #timer-display {
+        font-size: 120px;
+    }
+}
+
+@media (max-height: 800px) {
+    .layout {
+        padding: 2rem;
+    }
+}
+
+/* TIMER STYLES */
+.timer {
+    text-align: center;
+}
+
+#timer-display {
+    font-size: 200px;
+    margin: auto;
+}
+
+#timer-button {
+    font-family: "Gugi", sans-serif;
+    background-color: #FDE3BF;
+    font-size: 40px;
+    color: #703838;
+    height: 75px;
+    width: 28rem;
+    margin-top: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    max-width: 90vw;    
+    border: none;
+}
+
+
+
+
+/* AVATAR GROWING BOX STYLES */
+.avatar,
+.tasks {
+    background-color: #EDCEBE;
+    width: 350px;
+    max-width: 90vw;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.avatar {
+    min-height: 300px;
+    height: 40vh;
+    max-height: 450px;
+}
+
+
+/* TASKLIST BOX STYLES */
+.tasks {
+    min-height: 250px; 
+    height: 30vh; 
+    max-height: 350px;
+}
