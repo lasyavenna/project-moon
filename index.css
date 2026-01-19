@@ -99,9 +99,9 @@ body {
 
 #avatar-name {
     color: #703838;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: "Concert One", sans-serif;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .progress-bar {
@@ -131,6 +131,10 @@ body {
     justify-content: right;  /* horizontal center */
 }
 
+.avatar-growing {
+    height: 17rem;
+    padding-top: 10px;
+}
 
 
 
