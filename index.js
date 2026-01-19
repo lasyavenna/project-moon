@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateProgressBarManual() {
         progress = Math.min(progress + 3, 100);
         progressFill.style.width = `${progress}%`;
+
+        if (progress == 100) {
+            progress = 0;
+        }
     }
 
     avatarBox.addEventListener("click", updateProgressBarManual);
