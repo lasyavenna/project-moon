@@ -7,7 +7,7 @@ body {
 body {
     color: #703838;
     margin: auto;
-    font-family: "Gugi", sans-serif;
+    font-family: "Concert One", sans-serif;
 }
 
 .background {
@@ -63,7 +63,7 @@ body {
 }
 
 #timer-button {
-    font-family: "Gugi", sans-serif;
+    font-family: "Concert One", sans-serif;
     background-color: #FDE3BF;
     font-size: 40px;
     color: #703838;
@@ -100,7 +100,7 @@ body {
 #avatar-name {
     color: #703838;
     font-size: 2rem;
-    font-family: "Gugi", sans-serif;
+    font-family: "Concert One", sans-serif;
     padding-top: 20px;
 }
 
