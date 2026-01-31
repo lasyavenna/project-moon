@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateProgressBarManual() {
         progress = Math.min(progress + 3, 100);
         progressFill.style.width = `${progress}%`;
-        
+
         if (progress == 100) {
             progress = 0;
         }
@@ -40,19 +40,19 @@ addBtn.addEventListener("click", () => {
     taskList.appendChild(li);
     taskField.value = "";
 
-    li.querySelector(".complete-btn").addEventListener("click", () => { 
-        li.classList.toggle("task-complete"); 
+    li.querySelector(".complete-btn").addEventListener("click", () => {
+        li.classList.toggle("task-complete");
 
         // moving completed tasks to bottom
         requestAnimationFrame(() => {
             if (li.classList.contains("task-complete")) {
                 taskList.appendChild(li);
             } else {
-                const completedTasks = [...taskList.querySelectorAll(".task-complete")]; 
-                if (completedTasks.length > 0) { 
-                    taskList.insertBefore(li, completedTasks[0]); 
-                } else { 
-                    taskList.insertBefore(li, taskList.firstChild); 
+                const completedTasks = [...taskList.querySelectorAll(".task-complete")];
+                if (completedTasks.length > 0) {
+                    taskList.insertBefore(li, completedTasks[0]);
+                } else {
+                    taskList.insertBefore(li, taskList.firstChild);
                 }
             }
         });
@@ -62,5 +62,32 @@ addBtn.addEventListener("click", () => {
 taskField.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         addBtn.click();
+    }
+});
+
+
+
+// Button Click
+const button = document.getElementById('timer-button');
+const button2 = document.getElementById('add-task');
+const clickSound = document.getElementById('clickSound');
+
+// Play sound on click
+button.addEventListener('click', () => {
+    try {
+        clickSound.currentTime = 0; // rewind to start
+        clickSound.play();
+    } catch (err) {
+        console.error("Audio play failed:", err);
+    }
+});
+
+
+button2.addEventListener('click', () => {
+    try {
+        clickSound.currentTime = 0; // rewind to start
+        clickSound.play();
+    } catch (err) {
+        console.error("Audio play failed:", err);
     }
 });
