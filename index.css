@@ -212,3 +212,52 @@ body {
     text-decoration: line-through; 
     opacity: 0.6; 
 }
+
+/* HAMBURGER ICON */
+.hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 1000;
+    color: #703838;
+    user-select: none;
+}
+
+/* SIDE MENU */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* hidden by default */
+    width: 250px;
+    height: 100vh;
+    background-color: #EDCEBE;
+    padding-top: 80px;
+    transition: left 0.3s ease;
+    z-index: 999;
+    border-radius: 0 20px 20px 0;
+}
+
+/* WHEN MENU IS OPEN */
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu li {
+    padding: 20px;
+    font-size: 22px;
+    color: #703838;
+    cursor: pointer;
+    font-family: "Concert One", sans-serif;
+}
+
+.side-menu li:hover {
+    background-color: #FDE3BF;
+}

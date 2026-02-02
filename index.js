@@ -64,3 +64,15 @@ taskField.addEventListener("keydown", (e) => {
         addBtn.click();
     }
 });
+
+// hamburger menu
+const hamburger = document.getElementById("hamburger");
+const sideMenu = document.getElementById("side-menu");
+
+hamburger.addEventListener("click", () => {
+    sideMenu.classList.toggle("open");
+});
+
+document.getElementById("avatar-page").addEventListener("click", () => {
+    window.location.href = "avatar/avatar.html"; 
+});
