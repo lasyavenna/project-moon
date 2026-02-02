@@ -72,3 +72,7 @@ const sideMenu = document.getElementById("side-menu");
 hamburger.addEventListener("click", () => {
     sideMenu.classList.toggle("open");
 });
+
+document.getElementById("avatar-page").addEventListener("click", () => {
+    window.location.href = "avatar/avatar.html"; 
+});
