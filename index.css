@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     overflow-x: hidden;
 }
@@ -6,7 +7,7 @@ html, body {
 body {
     color: #703838;
     margin: auto;
-    font-family: "Gugi", sans-serif;
+    font-family: "Concert One", sans-serif;
 }
 
 .background {
@@ -67,7 +68,7 @@ body {
 }
 
 #timer-button {
-    font-family: "Gugi", sans-serif;
+    font-family: "Concert One", sans-serif;
     background-color: #FDE3BF;
     font-size: 40px;
     color: #703838;
@@ -77,7 +78,7 @@ body {
     border-radius: 30px;
     cursor: pointer;
     text-decoration: none;
-    max-width: 90vw;    
+    max-width: 90vw;
     border: none;
 }
 
@@ -95,15 +96,168 @@ body {
 }
 
 .avatar {
-    min-height: 300px;
-    height: 40vh;
-    max-height: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+#avatar-name {
+    color: #703838;
+    font-size: 2.5rem;
+    font-family: "Concert One", sans-serif;
+    padding-top: 10px;
+}
+
+.progress-bar {
+    width: 270px;
+    height: 25px;
+    background-color: #F4BA7A;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;      /* vertical center */
+    justify-content: left;  /* horizontal center */
+
+    font-family: "Gugi", sans-serif;
+    font-size: 0.9rem;
+}
+
+.progress-bar-fill {
+    width: 0;
+    height: 25px;
+    background-color: #F08571;
+    border-radius: 30px;
+
+    transition: all 0.3s;
+
+    display: flex;
+    align-items: center;      /* vertical center */
+    justify-content: right;  /* horizontal center */
+}
+
+.avatar-growing {
+    height: 17rem;
+    padding-top: 10px;
+}
 
 /* TASKLIST BOX STYLES */
 .tasks {
-    min-height: 250px; 
-    height: 30vh; 
-    max-height: 350px;
+    min-height: 300px; 
+    height: 40vh; 
+    max-height: 450px;
+}
+
+/* TASKLIST INTERNAL STYLES */
+.tasks h3 {
+    margin-top: 1rem; 
+    margin-bottom: 0.5rem; 
+    font-size: 24px; 
+    color: #703838;
+}
+
+.task-input { 
+    display: flex; 
+    gap: 10px; 
+    padding: 0 1rem; 
+    margin-bottom: 1rem; 
+}
+
+#task-field { 
+    flex: 1; 
+    padding: 10px; 
+    border-radius: 20px; 
+    border: none; 
+    font-family: "Gugi", sans-serif; 
+    font-size: 16px; 
+    color: #703838;
+}
+
+#add-task { 
+    width: 45px; 
+    height: 45px; 
+    border-radius: 50%; 
+    border: none; 
+    background-color: #FDE3BF; 
+    color: #703838; 
+    font-size: 24px; 
+    cursor: pointer; 
+}
+
+#task-list { 
+    list-style: none; 
+    padding: 0 1rem; 
+    margin: 0; 
+    overflow-y: auto; 
+    max-height: calc(30vh - 120px); 
+}
+
+#task-list li { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 8px 12px; 
+    border-radius: 15px; 
+    margin-bottom: 10px; 
+}
+
+.complete-btn { 
+    border: none; 
+    padding: 5px 8px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+}
+
+.task-complete { 
+    text-decoration: line-through; 
+    opacity: 0.6; 
+}
+
+/* HAMBURGER ICON */
+.hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 1000;
+    color: #703838;
+    user-select: none;
+}
+
+/* SIDE MENU */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* hidden by default */
+    width: 250px;
+    height: 100vh;
+    background-color: #EDCEBE;
+    padding-top: 80px;
+    transition: left 0.3s ease;
+    z-index: 999;
+    border-radius: 0 20px 20px 0;
+}
+
+/* WHEN MENU IS OPEN */
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu li {
+    padding: 20px;
+    font-size: 22px;
+    color: #703838;
+    cursor: pointer;
+    font-family: "Concert One", sans-serif;
+}
+
+.side-menu li:hover {
+    background-color: #FDE3BF;
 }
