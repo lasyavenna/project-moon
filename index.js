@@ -76,3 +76,72 @@ hamburger.addEventListener("click", () => {
 document.getElementById("avatar-page").addEventListener("click", () => {
     window.location.href = "avatar/avatar.html"; 
 });
+
+// --Timer functionality--
+const DEFAULT_TIME = 25 * 60;
+
+let timeLeft = DEFAULT_TIME;
+let timerInterval = null;
+let isRunning = false;
+
+const timerDisplay = document.getElementById("timer-display");
+const timerButton = document.getElementById("timer-button");
+const resetButton = document.getElementById("reset-button");
+
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+
+    return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+}
+
+function updateTimerDisplay() {
+    timerDisplay.textContent = formatTime(timeLeft);
+}
+
+function startTimer() {
+    if (isRunning) return;
+
+    isRunning = true;
+
+    timerInterval = setInterval(() => {
+        if (timeLeft > 0) {
+            timeLeft--;
+            updateTimerDisplay();
+        } else {
+            clearInterval(timerInterval);
+            isRunning = false;
+            alert("Time’s up! 🌙 Take a break.");
+        }
+    }, 1000);
+}
+
+function pauseTimer() {
+    clearInterval(timerInterval);
+    isRunning = false;
+}
+
+function resetTimer() {
+    clearInterval(timerInterval);
+    isRunning = false;
+    timeLeft = DEFAULT_TIME;
+    updateTimerDisplay();
+}
+
+timerButton.addEventListener("click", () => {
+    if (!isRunning) {
+        startTimer();
+        timerButton.textContent = "Pause";
+    } else {
+        pauseTimer();
+        timerButton.textContent = "Start";
+    }
+});
+
+resetButton.addEventListener("click", () => {
+    resetTimer();
+    timerButton.textContent = "Start";
+});
+
+// Initial render
+updateTimerDisplay();
