@@ -65,6 +65,8 @@ body {
 #timer-display {
     font-size: 200px;
     margin: auto;
+    min-width: 600px;
+    letter-spacing: 5px;
 }
 
 #timer-button {
@@ -82,8 +84,24 @@ body {
     border: none;
 }
 
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 10px;
+}
 
-
+#reset-button {
+    font-family: "Concert One", sans-serif;
+    background-color: #EDCEBE;
+    font-size: 24px;
+    color: #703838;
+    height: 75px;
+    width: 120px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+}
 
 /* AVATAR GROWING BOX STYLES */
 .avatar,
